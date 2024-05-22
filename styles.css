@@ -111,12 +111,25 @@ h2 {
 
 }
 .dark-mode button {
-    background-color: #3498db;
+    background-color: #6ac3ff;
     color: #fff;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+.dark-mode button:hover {
+    background-color: #2980b9;
+}
+.dark-mode .settings-content {
+    background-color: #333333;
+    color: #f4f4f4;
+}
+.dark-mode .settings-content a {
+    color: #f4f4f4;
+}
+.dark-mode .deals {
+    background-color: #333333;
 }
 
 .settings {
