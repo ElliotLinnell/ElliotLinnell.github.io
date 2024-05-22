@@ -131,6 +131,10 @@ h2 {
 .dark-mode .deal-item {
     background-color: #333333;
 }
+.dark-mode p{
+    color: #f4f4f4;
+
+}
 
 .settings {
     position: relative;
