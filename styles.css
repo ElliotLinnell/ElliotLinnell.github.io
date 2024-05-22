@@ -108,6 +108,15 @@ h2 {
 .dark-mode {
     background-color: #333333;
     color: #f4f4f4;
+
+}
+.dark-mode button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .settings {
