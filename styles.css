@@ -5,8 +5,9 @@ body {
 }
 
 header {
-    background-color: #6dc7ff;
+    background-color: hsl(203, 100%, 71%);
     padding: 1rem;
+    width: 100%;
 }
 
 nav ul {

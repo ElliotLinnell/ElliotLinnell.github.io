@@ -30,4 +30,5 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Text copied to clipboard: ' + grayedText.innerText);
         });
     });
+    
 });
