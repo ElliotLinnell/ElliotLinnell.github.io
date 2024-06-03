@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Help - Dream Destinations</title>
+    <title>Book - Dream Destinations</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,12 +28,41 @@
     </header>
     
     <main>
-        <section class="section" id="help">
+        <section class="section" id="bookings">
             <div class="content">
-                <h2>Help</h2>
-                <p>If you need assistance, you can reach out to us through the contact form on the Contact Us page or by calling our customer support.</p>
-                <p>For frequently asked questions, please visit our FAQ section.</p>
-                <p>We are here to help you make your dream holiday a reality.</p>
+                <h2>Bookings</h2>
+                <p>Book your dream holiday with Dream Destinations.</p>
+                <form action="submit.php" method="post" id="booking-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="destination">Destination:</label>
+                    <select id="destination" name="destination" required>
+                        <option value="">Select Destination</option>
+                        <option value="Caribbean">Caribbean</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Asia">Asia</option>
+                    </select>
+                    
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+                    
+                    <label for="extras">Optional Extras:</label>
+                    <input type="checkbox" id="extra1" name="extra1">
+                    <label for="extra1">Room Upgrade</label>
+                    <input type="checkbox" id="extra2" name="extra2">
+                    <label for="extra2">Excursions</label>
+                    <input type="checkbox" id="extra3" name="extra3">
+                    <label for="extra3">Special Packages</label>
+                    
+                    <label for="message">Additional Comments:</label>
+                    <textarea id="message" name="message"></textarea>
+                    
+                    <input type="submit" value="Book Now">
+                </form>
             </div>
         </section>
     </main>
