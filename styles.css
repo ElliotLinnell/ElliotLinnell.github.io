@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #6ac3ff;
     max-width: 100%;
     overflow-x: hidden;
     line-height: 1.6;
@@ -56,9 +56,9 @@ nav ul li a:hover {
     border-radius: 4px;
 }
 
-/* Main content */
 main {
     margin: 0;
+    background-image: url("https://img.freepik.com/free-photo/view-palm-tree-species-with-green-foliage_23-2151486427.jpg?t=st=1717421062~exp=1717424662~hmac=5bab371f48eaf0837d6b2a7cfc523f2760ab1b5c1c168ad7e3af370e9980fec2&w=1800");
 }
 
 .section {
@@ -74,6 +74,7 @@ main {
     background-position: center;
     display: block;
     width: 100%;
+    background-image: url("https://img.freepik.com/free-photo/beautiful-tropical-beach-sea_74190-6767.jpg?w=1800&t=st=1717420886~exp=1717421486~hmac=12738da5fbd23ec5626221bc02a9de153fbdea05a737463872c12cfbe09d3262");
 }
 
 #home {
