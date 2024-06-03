@@ -1,17 +1,22 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $conn->real_escape_string($_POST["name"]);
-    $email = $conn->real_escape_string($_POST["email"]);
-    $message = $conn->real_escape_string($_POST["message"]);
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+    
+    $to = "linnellelliot@gmail.com";
+    $subject = "New Form Submission";
+    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+    $headers = "From: $email";
 
-    $sql = "INSERT INTO submissions (name, email, message) VALUES ('$name', '$email', '$message')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+    if (mail($to, $subject, $body, $headers)) {
+        echo "Email successfully sent.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Email sending failed.";
     }
-
-    $conn->close();
+} else {
+    echo "An error occurred.";
 }
 ?>
+
+
