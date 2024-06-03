@@ -330,3 +330,28 @@ form {
 .destination {
     background-color: #6dc7ff;
 }
+@media only screen and (max-width: 767px) {
+    header {
+        padding: 0.5rem; 
+    }
+
+    nav ul li a {
+        font-size: 1rem; 
+        padding: 8px; 
+    }
+
+    .destination {
+        max-width: 100%; 
+        margin: 10px auto; 
+        width: 90%; 
+    }
+
+    main {
+        margin: 0; 
+    }
+
+    footer {
+        padding: 0.5rem; 
+    }
+}
+
