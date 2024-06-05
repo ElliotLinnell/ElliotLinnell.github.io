@@ -205,6 +205,9 @@ h2 {
 .dark-mode .deal-item {
     background-color: #333333;
 }
+.dark-mode #home {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZtZeC25TYECUMd_L-PuB3Pro23a2qv1Qyqw&s');
+}
 
 .settings {
     position: relative;
