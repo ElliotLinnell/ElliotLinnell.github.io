@@ -1,2 +1,0 @@
-docker build -t $FormDatabase .
-docker run -d -p 8080:8080 $IMAGE_NAME
