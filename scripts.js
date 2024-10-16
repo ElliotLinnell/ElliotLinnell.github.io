@@ -27,17 +27,18 @@ function addToCart(productId, event) {
         const product = document.querySelector(`.product[data-id="${productId}"]`);
         const productName = product.querySelector('h3').innerText;
         const productPrice = product.querySelector('p').innerText;
-        addProductToCart(productId, productName, productPrice);
+        addProductToCart(productId, productName, productPrice, null);
     }
 }
 
-function addProductToCart(productId, name, price) {
-    const existingProduct = cart.find(item => item.id === productId);
+function addProductToCart(productId, name, price, size, posterId) {
+    const uniqueKey = `${productId}-${size || 'default'}`;
+    const existingProduct = cart.find(item => item.uniqueKey === uniqueKey);
 
     if (existingProduct) {
         existingProduct.quantity += 1;
     } else {
-        cart.push({ id: productId, name, price, quantity: 1 });
+        cart.push({ id: productId, name, price, size, posterId, quantity: 1, uniqueKey });
     }
 
     saveCart();
@@ -48,15 +49,16 @@ function selectSize(size) {
     const product = document.querySelector('.product[data-id="1"]');
     const productName = `${product.querySelector('h3').innerText} - Size: ${size}`;
     const productPrice = product.querySelector('p').innerText;
-    addProductToCart(1, productName, productPrice);
+    addProductToCart(1, productName, productPrice, size);
     closeModal('sizeModal');
 }
+
 
 function selectPoster(posterId) {
     const product = document.querySelector('.product[data-id="4"]');
     const productName = `${product.querySelector('h3').innerText} - Poster ${posterId}`;
     const productPrice = product.querySelector('p').innerText;
-    addProductToCart(4, productName, productPrice);
+    addProductToCart(4, productName, productPrice, posterId);
     closeModal('posterModal');
 }
 
